@@ -7,10 +7,14 @@ const srcPath = path.resolve(__dirname, 'src', 'styles', 'variables.scss')
 export default defineConfig({
   plugins: [vue(), WindiCSS()],
   define: { 'process.env': {} },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
   css: {
     preprocessorOptions: {
-      sass: { additionalData: `@import ${srcPath}\n` },
-      scss: { additionalData: `@import ${srcPath};\n` },
+
     },
   },
   build: {

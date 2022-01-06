@@ -1,24 +1,11 @@
 <template>
   <v-app>
-    <v-main>
-      <HelloWorld/>
-    </v-main>
+    <div class='flex flex-1 min-h-screen min-w-screen px-8 py-4'>
+      <router-view />
+    </div>
   </v-app>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-
-export default {
-  name: 'App',
-
-  components: {
-    HelloWorld,
-  },
-
-  data: () => ({
-    //
-  }),
-}
+<script setup lang="ts">
+console.log('entro')
 </script>
